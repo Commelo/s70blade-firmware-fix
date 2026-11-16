@@ -1,5 +1,10 @@
 # S70 Blade Fix — destravando o atualizador de firmware da ADATA
 
+> **Vídeo contando o caso** (português, com legendas em inglês):
+> <https://www.youtube.com/watch?v=kgdAi8s8aTU>
+>
+> English version of this guide: [README.en.md](README.en.md)
+
 Alguns SSDs **XPG GAMMIX S70 BLADE** nunca aparecem no atualizador oficial de firmware da
 ADATA. Não é defeito, não é cabo, não é chipset, não é a sua máquina: é uma **lista de
 modelos incompleta dentro do próprio instalador da ADATA**. O SSD se identifica com o

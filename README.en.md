@@ -1,5 +1,10 @@
 # S70 Blade Fix — unblocking ADATA's firmware updater
 
+> **Video walkthrough of the case** (Brazilian Portuguese, with English subtitles):
+> <https://www.youtube.com/watch?v=kgdAi8s8aTU>
+>
+> Versão em português deste guia: [README.md](README.md)
+
 Some **XPG GAMMIX S70 BLADE** SSDs never show up in ADATA's official firmware updater. It is
 not a faulty drive, not your chipset, not your machine: it is an **incomplete model whitelist
 inside ADATA's own installer**. The drive identifies itself with its retail part number
