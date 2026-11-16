@@ -1,0 +1,60 @@
+Transcrição do UpdateFWInfo.ini embutido em FWUpdate_3.2.F.66.exe
+(pacote FWUpdate_32F66.zip, baixado do site de suporte da ADATA)
+
+O arquivo original está em UTF-16LE com BOM, 1.816 bytes, comprimido com deflate
+dentro do ZIP embutido no executável. Abaixo está o conteúdo transcrito em texto
+simples, para referência. Os dois membros .fw do mesmo ZIP não são redistribuídos.
+
+Para ler a whitelist do SEU pacote (que pode ser outra versão):
+
+    python scripts/patch_fwupdate.py --exe SEU_ARQUIVO.exe --listar
+
+------------------------------------------------------------------------------
+
+[UPDATEINFO]
+KERNEL=UpdatePackage 1.0.0.16-25
+TITLE=FFU_3.2.F.66
+NEWVERSION=
+SOCID=5236
+ModelName=XPG GAMMIX S70;XPG GAMMIX S70 BLADE;APSFG-1T-CSUS;APSFG-2T-CSUS;APSFG-512GCS;APSFG-1TCS;APSFG-2TCS
+FWVersion=3.2.F.P7;3.2.F.2A;3.2.F.2M;3.2.F.3C;3.2.F.46
+iInternalFWVersionCheckPart=3
+BeforeMessage=Warning !<BR>If FW is not back compatible, The user data will be erased.
+AfterMessage=Update FW OK !<BR>Reboot System Now ?
+PowerCtrl=2
+[FwSelectRecord]
+Micron-B47R_0=C:\old\Innogrit\ADATA\FW update tool\UpdateFWPackage_1.0.0.16\adata_3.2.F.66\mputility\m2_0305\rdisk+cust+512b+hcrc+semi+secc+logerr+no6654+tempad1+perrskip+smartwa+dst+pulse+aes+rel+a1perf+b47r-cmfg.fw
+YMTC-X2-9060_1=C:\old\Innogrit\ADATA\FW update tool\UpdateFWPackage_1.0.0.16\adata_3.2.F.66\mputility\m2_0305\rdisk+cust+512b+hcrc+semi+secc+logerr+no6654+tempad1+perrskip+smartwa+dst+pulse+aes+rel+a1perf+ymtcx2slun-cmfg.fw
+
+------------------------------------------------------------------------------
+
+NOTAS DE LEITURA
+
+ModelName
+    A lista de modelos aceitos. Repare na assimetria: a linha do PS5 (APSFG-*)
+    está coberta exaustivamente por número de peça — todos os cinco SKUs. A linha
+    GAMMIX está coberta apenas pelo nome de exibição. Nenhum AGAMMIXS70B-* aparece.
+    É aqui que mora o defeito.
+
+FWVersion
+    Versões de ORIGEM permitidas. Note que 3.2.F.2A está na lista: a ADATA
+    pretendia que drives nessa versão fossem atualizáveis por este pacote. Isso é
+    o que mostra que a omissão em ModelName é esquecimento, não bloqueio.
+
+SOCID=5236
+    Identificador da controladora InnoGrit. Bate com o que os S70 Blade reportam.
+
+[FwSelectRecord]
+    Os caminhos revelam a origem interna do pacote: ferramenta de mass production
+    da InnoGrit, adaptada para a ADATA. Os nomes de arquivo listam as flags de
+    build do firmware (aes, secc, logerr, a1perf...) e, no fim, a NAND alvo:
+    b47r (Micron B47R) e ymtcx2slun (YMTC X2-9060). São essas duas imagens que
+    estão no ZIP, e é por isso que dá para afirmar que a NAND do drive afetado
+    tem imagem presente no pacote.
+
+PowerCtrl=2
+    Controle de energia durante o flash. Não foi investigado a fundo.
+
+iInternalFWVersionCheckPart=3
+    Uma verificação interna adicional de versão. Não foi investigado a fundo —
+    na prática o flash passou sem problema.

@@ -1,0 +1,37 @@
+# Arte de marca do canal — não faz parte do pacote público.
+# Fica aqui localmente porque a produção do vídeo precisa dela.
+video/personagem/
+
+# Capturas de tela feitas pelo capturar.ps1 — material bruto, não distribuído.
+video/capturas/
+
+# Binários da ADATA, caso alguém os copie para cá por engano.
+# O projeto NUNCA redistribui firmware ou executável do fabricante.
+*.exe
+*.fw
+
+# PNGs gerados pelo exportar_png.ps1 — regeráveis em menos de um minuto.
+# Descomente se não quiser versioná-los:
+# video/png/
+
+# Producao do video: audio gerado e MP4 sao regeraveis e pesados.
+video/producao/audio/
+video/producao/saida/
+# A thumbnail D usa a arte do personagem, que nao e distribuida.
+video/png/thumbnail-D.png
+
+__pycache__/
+*.pyc
+
+# Amostra de voz do dono do canal (clonagem). Dado pessoal: nunca versionar.
+video/producao/voz/
+
+# Anotacoes de trabalho e instrucoes do assistente: nao sao documentacao do projeto.
+CLAUDE.md
+.claude/
+MEMORY.md
+
+# Producao do video do canal: fica so na maquina do autor. O repositorio publico
+# leva apenas o que a pessoa precisa para rodar os scripts.
+video/
+ROTEIRO_VIDEO*.md
