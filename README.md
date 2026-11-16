@@ -303,8 +303,12 @@ Se der `REPROVADO`, pare. Não use.
 
 ### 5. Prepare a máquina
 
-- Desconecte ou desmonte discos que você **não** quer atualizar. O atualizador lista todos os
-  que passam pelo filtro, e é fácil clicar no errado.
+- **Só importa quem aparece na lista.** O atualizador mostra apenas os discos cujo modelo
+  consta na `ModelName`. SSDs de outra marca ou de outra linha nem aparecem, e não precisam
+  ser desconectados.
+- Se você tem **outro SSD que a lista aceita** (um segundo S70 Blade, por exemplo, como era o
+  caso aqui), desconecte ou desmonte o que você **não** quer atualizar, ou redobre a atenção no
+  passo 6: com dois na lista é fácil clicar no errado.
 - Feche tudo. Nada de download, torrent, compilação rodando.
 - **Notebook: na tomada.** Desktop: se tiver nobreak, é a hora de usar.
 - Se tiver dois SSDs do mesmo modelo, identifique pelo **firmware atual**, não pelo nome — em

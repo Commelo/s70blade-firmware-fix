@@ -284,8 +284,12 @@ If it says `REPROVADO`, stop. Do not use it.
 
 ### 5. Prepare the machine
 
-- Disconnect or offline any drive you **don't** want to update. The updater lists everything
-  that passes the filter, and misclicking is easy.
+- **Only drives that show up in the list matter.** The updater shows only drives whose model
+  is in `ModelName`. SSDs from another brand or product line don't appear at all and don't need
+  to be disconnected.
+- If you have **another SSD the list accepts** (a second S70 Blade, for example, as was the
+  case here), disconnect or offline the one you **don't** want to update, or be extra careful in
+  step 6: with two in the list, misclicking is easy.
 - Close everything. No downloads, torrents, or builds running.
 - **Laptop: plug it in.** Desktop: this is what the UPS is for.
 - With two drives of the same model, identify by **current firmware version**, not by name —
